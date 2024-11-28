@@ -16,7 +16,7 @@ for i in range(len(image_paths)):
         img2_path = image_paths[j]
         
         # 使用 DeepFace 进行验证
-        result = DeepFace.verify(img1_path, img2_path, model_name='VGG-Face', distance_metric='cosine')
+        result = DeepFace.verify(img1_path, img2_path, model_name='VGG-Face', distance_metric='cosine', enforce_detection=False)
         
         # 将结果存储到列表中
         results.append({
