@@ -3,7 +3,7 @@ import os
 import pandas as pd
 
 # 设置图像库路径
-image_folder = "/task_datasets"
+image_folder = "task_datasets"
 image_paths = [os.path.join(image_folder, f) for f in os.listdir(image_folder) if f.endswith(('.jpg', '.png'))]
 
 # 创建一个 DataFrame 来存储结果
