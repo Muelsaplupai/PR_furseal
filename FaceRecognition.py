@@ -3,7 +3,7 @@ import os
 import pandas as pd
 
 # 设置图像库路径
-image_folder = "task_datasets"
+image_folder = "face"
 image_paths = [os.path.join(image_folder, f) for f in os.listdir(image_folder) if f.endswith(('.jpg', '.png'))]
 
 # 创建一个 DataFrame 来存储结果
@@ -16,6 +16,8 @@ for i in range(len(image_paths)):
         img2_path = image_paths[j]
         
         # 使用 DeepFace 进行验证
+        print("Image 1 path:", img1_path)
+        print("Image 2 path:", img2_path)
         result = DeepFace.verify(img1_path, img2_path, model_name='VGG-Face', distance_metric='cosine', enforce_detection=False)
         
         # 将结果存储到列表中
