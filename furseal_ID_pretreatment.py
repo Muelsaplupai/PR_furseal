@@ -57,7 +57,7 @@ def main():
     # 读取数据
     file_path = 'seal_identification_results.csv'
     headers, data = read_csv(file_path)
-
+    headers=['img','jpgID','faceID']
     # 分配ID
     assigned_rows = assign_ids(data)
 
